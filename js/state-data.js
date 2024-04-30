@@ -161,18 +161,6 @@ var stateData = {
 		capitol: 'Springfield',
 		pop: '12,882,135',
 		statehood: '1818',
-		mammal: 'White-tailed Deer',
-		bird: 'Cardinal',
-		tree: 'White Oak',
-		flower: 'Violet',
-		nickname: 'Prairie State'
-	},
-	il: {
-		name: 'Illinois',
-		abbr: 'IL',
-		capitol: 'Springfield',
-		pop: '12,882,135',
-		statehood: '1818',
 		mammal: 'White-Tailed Deer',
 		bird: 'Cardinal',
 		tree: 'White Oak',
@@ -636,3 +624,19 @@ var stateData = {
 		nickname: 'Equality State'
 	}
 };
+
+let stateList = document.getElementById('state-list')
+function functionName() {
+	let value = stateList.value
+	document.getElementById('info-name').innerText = stateData[value].name
+	document.getElementById('info-abbreviation').innerText = stateData[value].abbr
+	document.getElementById('info-capitol').innerText = stateData[value].capitol
+	document.getElementById('info-population').innerText = stateData[value].pop
+	document.getElementById('info-statehood').innerText = stateData[value].statehood
+	document.getElementById('info-mammal').innerText = stateData[value].mammal
+	document.getElementById('info-bird').innerText = stateData[value].bird
+	document.getElementById('info-tree').innerText = stateData[value].tree
+	document.getElementById('info-flower').innerText = stateData[value].flower
+	document.getElementById('info-nickname').innerText = stateData[value].nickname
+}
+stateList.onchange = functionName
